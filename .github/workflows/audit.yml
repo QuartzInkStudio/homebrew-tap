@@ -12,4 +12,5 @@ jobs:
       - name: Audit Casks
         run: |
           brew tap QuartzInkStudio/tap "$GITHUB_WORKSPACE"
+          brew trust QuartzInkStudio/tap
           brew audit --cask --online tuck-menu-bar facet peekmark
