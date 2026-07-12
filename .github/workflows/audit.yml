@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Audit Casks
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           brew tap QuartzInkStudio/tap "$GITHUB_WORKSPACE"
           brew trust QuartzInkStudio/tap
