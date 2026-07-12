@@ -1,0 +1,15 @@
+name: Audit Casks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit Casks
+        run: |
+          brew tap QuartzInkStudio/tap "$GITHUB_WORKSPACE"
+          brew audit --cask --online tuck-menu-bar facet peekmark
