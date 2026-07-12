@@ -8,7 +8,7 @@ cask "tuck-menu-bar" do
   desc "Organize and hide menu bar icons"
   homepage "https://usetuck.com/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Tuck.app"
 

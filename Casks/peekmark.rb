@@ -8,7 +8,7 @@ cask "peekmark" do
   desc "Local-first Markdown previewer with Finder Quick Look"
   homepage "https://peekmark.quartz.ink/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "PeekMark.app"
 end

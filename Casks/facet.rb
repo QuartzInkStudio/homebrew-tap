@@ -8,7 +8,7 @@ cask "facet" do
   desc "Visual app launcher and classic Launchpad replacement"
   homepage "https://facet.quartz.ink/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Facet.app"
 end
