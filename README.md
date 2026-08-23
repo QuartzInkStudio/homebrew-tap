@@ -24,7 +24,7 @@ brew install --cask QuartzInkStudio/tap/peekmark
 | Cask | App | Website |
 | --- | --- | --- |
 | `tuck-menu-bar` | Tuck | [usetuck.com](https://usetuck.com/) |
-| `facet` | Facet | [facet.quartz.ink](https://facet.quartz.ink/) |
+| `facet` | Facet | [facetlauncher.com](https://facetlauncher.com/) |
 | `peekmark` | PeekMark | [peekmark.quartz.ink](https://peekmark.quartz.ink/) |
 
 The Casks install signed and Apple-notarized DMGs published in each app's official GitHub Releases.
