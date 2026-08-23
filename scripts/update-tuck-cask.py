@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import sys
+import time
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
@@ -27,7 +28,8 @@ def main() -> int:
     repository = Path(os.environ.get("GITHUB_WORKSPACE", Path(__file__).resolve().parents[1]))
     cask_path = repository / "Casks" / "tuck-menu-bar.rb"
 
-    root = ET.fromstring(download(APPCAST_URL))
+    appcast_url = f"{APPCAST_URL}?homebrew-sync={time.time_ns()}"
+    root = ET.fromstring(download(appcast_url))
     item = root.find("./channel/item")
     if item is None:
         raise RuntimeError("Stable appcast has no release item")
