@@ -27,4 +27,6 @@ brew install --cask QuartzInkStudio/tap/peekmark
 | `facet` | Facet | [facetlauncher.com](https://facetlauncher.com/) |
 | `peekmark` | PeekMark | [peekmark.quartz.ink](https://peekmark.quartz.ink/) |
 
-The Casks install signed and Apple-notarized DMGs published in each app's official GitHub Releases.
+The Casks install signed and Apple-notarized DMGs from each app's official download channel.
+
+The `tuck-menu-bar` Cask is synchronized automatically from Tuck's Stable Sparkle appcast. Compatibility Preview releases use a separate appcast and are never published through the default Homebrew Cask.
