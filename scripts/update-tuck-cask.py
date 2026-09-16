@@ -48,8 +48,13 @@ def main() -> int:
     if not build.isdigit():
         raise RuntimeError(f"Unexpected Stable build: {build!r}")
 
-    expected_url = f"https://usetuck.com/download/Tuck-{short_version}-build{build}.dmg"
-    if dmg_url != expected_url:
+    expected_urls = {
+        f"https://usetuck.com/download/Tuck-{short_version}-build{build}.dmg":
+            'https://usetuck.com/Tuck-#{version.csv.first}-build#{version.csv.second}.dmg',
+        f"https://usetuck.com/download/Tuck-{short_version}.dmg":
+            'https://usetuck.com/Tuck-#{version.csv.first}.dmg',
+    }
+    if dmg_url not in expected_urls:
         raise RuntimeError(f"Stable enclosure URL mismatch: {dmg_url!r}")
 
     dmg = download(dmg_url)
@@ -74,7 +79,14 @@ def main() -> int:
         count=1,
         flags=re.MULTILINE,
     )
-    if version_replacements != 1 or sha_replacements != 1:
+    cask, url_replacements = re.subn(
+        r'^  url "[^"]+"$',
+        f'  url "{expected_urls[dmg_url]}"',
+        cask,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    if version_replacements != 1 or sha_replacements != 1 or url_replacements != 1:
         raise RuntimeError("Could not update the expected Cask version and SHA-256 fields")
 
     previous = cask_path.read_text(encoding="utf-8")

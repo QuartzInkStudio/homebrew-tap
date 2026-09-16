@@ -1,8 +1,8 @@
 cask "tuck-menu-bar" do
-  version "1.0.47,54"
-  sha256 "9cabe47d4c63cb82e9efee0e3c517b98909809227e8b339a764100e91889aba0"
+  version "1.0.51,71"
+  sha256 "f1bd1ccbc1913de6e744aa5c1eadc32bb3a6a50f1a834c0857997e5b6e20fd0c"
 
-  url "https://usetuck.com/Tuck-#{version.csv.first}-build#{version.csv.second}.dmg"
+  url "https://usetuck.com/Tuck-#{version.csv.first}.dmg"
   name "Tuck"
   desc "Organize and hide menu bar icons"
   homepage "https://usetuck.com/"
