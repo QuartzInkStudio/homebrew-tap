@@ -1,6 +1,6 @@
 cask "facet" do
-  version "1.0.28"
-  sha256 "feedbb83b9c318e05ff31f47f209230980e1a989b8cbbce993d32722cfd27262"
+  version "1.0.29"
+  sha256 "9e940b803cb185429dc34e5f3a9addac1732b3737f7eb88b08f89e7b7bc9d4ea"
 
   url "https://github.com/QuartzInkStudio/Facet/releases/download/v#{version}/Facet-#{version}.dmg"
   name "Facet"
