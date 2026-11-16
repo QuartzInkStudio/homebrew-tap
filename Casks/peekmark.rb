@@ -1,6 +1,6 @@
 cask "peekmark" do
-  version "1.1"
-  sha256 "8962a9e69cc5782487907b7f22499e1f5f73dd862ea82b635ca5fbbce9cb5fdc"
+  version "1.2"
+  sha256 "32671850f1268e0f934ebf3f83061ecaeda45291c019be6044eb0afe597d39da"
 
   url "https://github.com/QuartzInkStudio/PeekMark/releases/download/v#{version}/PeekMark-#{version}.dmg"
   name "PeekMark"
