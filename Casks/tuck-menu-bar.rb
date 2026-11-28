@@ -1,6 +1,6 @@
 cask "tuck-menu-bar" do
-  version "1.6.2,327"
-  sha256 "87e096313d3fc32ec703bc736a1f59638dd38e1df3cb23a12c6814109ed9ec89"
+  version "1.6.4,330"
+  sha256 "e5a11d5e6590e80d93a57c46db906173f19fead5e9bb1ad40758ebb73d3cc37c"
 
   url "https://usetuck.com/Tuck-#{version.csv.first}.dmg"
   name "Tuck"
